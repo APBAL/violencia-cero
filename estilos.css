@@ -129,3 +129,58 @@ footer {
     color: #444;
     font-size: 0.8rem;
 }
+
+/* --- ESTILOS EXCLUSIVOS PARA PÁGINAS INTERNAS (Como Tipos) --- */
+
+/* Hero más pequeño para no ocupar toda la pantalla en internas */
+.hero-sub {
+    height: 60vh;
+    background: linear-gradient(to right, #000 40%, #351451 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+/* El Violentómetro: No afecta a Inicio porque Inicio no tiene esta clase */
+.violentometro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.nivel {
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nivel span { font-size: 2.5rem; font-weight: 800; opacity: 0.3; }
+.nivel-amarillo { background: rgba(255, 193, 7, 0.15); border-left: 8px solid #ffc107; }
+.nivel-naranja { background: rgba(255, 87, 34, 0.15); border-left: 8px solid #ff5722; }
+.nivel-rojo { background: rgba(233, 30, 99, 0.15); border-left: 8px solid #e91e63; }
+
+/* Grid de detalles para los cuadros de info */
+.grid-detalles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-detalle {
+    background: #111;
+    padding: 35px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.tarjeta-detalle:hover { border-color: #e91e63; transform: translateY(-5px); }
+.tarjeta-detalle i { font-size: 2rem; color: #e91e63; margin-bottom: 20px; }
+
+/* Referencias APA */
+.referencias-apa { margin-top: 80px; padding-top: 40px; border-top: 1px solid #222; font-size: 0.9rem; color: #777; }
+.referencias-apa li { margin-bottom: 10px; list-style: none; }
