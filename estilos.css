@@ -184,3 +184,38 @@ footer {
 /* Referencias APA */
 .referencias-apa { margin-top: 80px; padding-top: 40px; border-top: 1px solid #222; font-size: 0.9rem; color: #777; }
 .referencias-apa li { margin-bottom: 10px; list-style: none; }
+
+/* --- ESTILOS PARA LA SECCIÓN DE ESTADÍSTICAS --- */
+
+.grid-graficas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tarjeta-grafica {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    text-align: center;
+}
+
+.tarjeta-grafica h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.tarjeta-grafica p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+/* Para que las gráficas circulares no se hagan gigantes */
+.canvas-pie {
+    max-width: 250px;
+    margin: 0 auto;
+}
