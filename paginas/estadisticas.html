@@ -35,6 +35,7 @@ o incluso en espacios digitales.
 <h2>Lugares donde ocurre la violencia</h2>
 
 <canvas id="grafica2"></canvas>
+
 </section>
 
 <footer>
@@ -45,6 +46,7 @@ Datos informativos
 
 document.addEventListener("DOMContentLoaded", function(){
 
+// Primera gráfica
 const ctx = document.getElementById('grafica').getContext('2d');
 
 new Chart(ctx, {
@@ -72,8 +74,7 @@ beginAtZero:true
 }
 });
 
-});
-
+// Segunda gráfica
 const ctx2 = document.getElementById('grafica2').getContext('2d');
 
 new Chart(ctx2, {
@@ -90,6 +91,8 @@ backgroundColor:[
 ]
 }]
 }
+});
+
 });
 
 </script>
