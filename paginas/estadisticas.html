@@ -29,153 +29,21 @@ o incluso en espacios digitales.
 </p>
 
 <h2>Tipos de violencia reportados</h2>
-
 <canvas id="grafica" width="400" height="200"></canvas>
 
 <h2>Lugares donde ocurre la violencia</h2>
-
 <canvas id="grafica2"></canvas>
 
-</section>
-
-<footer>
-Datos informativos
-</footer>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function(){
-
-// --------------------
-// Gráfica 1
-// Tipos de violencia
-// --------------------
-
-const ctx = document.getElementById('grafica').getContext('2d');
-
-new Chart(ctx, {
-type: 'bar',
-data: {
-labels: [
-'Psicológica',
-'Sexual',
-'Física',
-'Económica'
-],
-datasets: [{
-label: 'Tipos de violencia reportados (%)',
-data: [51.6,49.7,34.7,27.4],
-backgroundColor:[
-'#8e44ad',
-'#e74c3c',
-'#3498db',
-'#f1c40f'
-],
-borderWidth:1
-}]
-},
-options:{
-responsive:true,
-plugins:{
-legend:{
-display:true
-}
-},
-scales:{
-y:{
-beginAtZero:true,
-title:{
-display:true,
-text:'Porcentaje de mujeres'
-}
-}
-}
-}
-});
-
-
-// --------------------
-// Gráfica 2
-// Lugares donde ocurre
-// --------------------
-
-const ctx2 = document.getElementById('grafica2').getContext('2d');
-
-new Chart(ctx2, {
-type: 'pie',
-data: {
-labels: [
-'Espacios públicos',
-'Escuela',
-'Trabajo',
-'Ámbito familiar'
-],
-datasets: [{
-data: [38.7,25.3,16.6,10.3],
-backgroundColor:[
-'#8e44ad',
-'#e74c3c',
-'#3498db',
-'#f1c40f'
-]
-}]
-},
-options:{
-responsive:true,
-plugins:{
-legend:{
-position:'bottom'
-}
-}
-}
-});
-
-
-// --------------------
-// Gráfica 3
-// Mujeres que han sufrido violencia
-// --------------------
-
-const ctx3 = document.getElementById('grafica3').getContext('2d');
-
-new Chart(ctx3, {
-type: 'doughnut',
-data: {
-labels: [
-'Ha sufrido violencia',
-'No ha sufrido violencia'
-],
-datasets: [{
-data: [70.1,29.9],
-backgroundColor:[
-'#e74c3c',
-'#2ecc71'
-]
-}]
-},
-options:{
-responsive:true,
-plugins:{
-legend:{
-position:'bottom'
-}
-}
-}
-});
-
-});
-
-</script>
-</body> <h2>Mujeres que han sufrido violencia en México</h2>
-
+<h2>Mujeres que han sufrido violencia en México</h2>
 <canvas id="grafica3"></canvas>
 
 <h2>Datos en México</h2>
 
 <p>
 De acuerdo con la Encuesta Nacional sobre la Dinámica de las Relaciones
-en los Hogares realizada por el Instituto Nacional de Estadística y
-Geografía, aproximadamente el 70.1% de las mujeres mexicanas de
+en los Hogares realizada por el 
+:contentReference[oaicite:0]{index=0},
+aproximadamente el 70.1% de las mujeres mexicanas de
 15 años o más han experimentado algún tipo de violencia a lo largo
 de su vida.
 </p>
@@ -199,7 +67,72 @@ Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares (ENDIREH).
 </p>
 
 <p>
-ONU Mujeres. (2022).
+:contentReference[oaicite:1]{index=1}. (2022).
 Hechos y cifras: Poner fin a la violencia contra las mujeres.
 </p>
+
+</section>
+
+<footer>
+Datos informativos
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+// Gráfica 1
+const ctx = document.getElementById('grafica').getContext('2d');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels:['Psicológica','Sexual','Física','Económica'],
+datasets:[{
+label:'Tipos de violencia reportados (%)',
+data:[51.6,49.7,34.7,27.4],
+backgroundColor:['#8e44ad','#e74c3c','#3498db','#f1c40f']
+}]
+},
+options:{
+responsive:true,
+scales:{y:{beginAtZero:true}}
+}
+});
+
+
+// Gráfica 2
+const ctx2 = document.getElementById('grafica2').getContext('2d');
+
+new Chart(ctx2,{
+type:'pie',
+data:{
+labels:['Espacios públicos','Escuela','Trabajo','Ámbito familiar'],
+datasets:[{
+data:[38.7,25.3,16.6,10.3],
+backgroundColor:['#8e44ad','#e74c3c','#3498db','#f1c40f']
+}]
+}
+});
+
+
+// Gráfica 3
+const ctx3 = document.getElementById('grafica3').getContext('2d');
+
+new Chart(ctx3,{
+type:'doughnut',
+data:{
+labels:['Ha sufrido violencia','No ha sufrido violencia'],
+datasets:[{
+data:[70.1,29.9],
+backgroundColor:['#e74c3c','#2ecc71']
+}]
+}
+});
+
+});
+
+</script>
+
+</body>
 </html>
