@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <meta charset="UTF-8">
 <title>Estadísticas</title>
 <link rel="stylesheet" href="../estilos.css">
 </head>
 
-<body>
+<body><script>
+
+const ctx = document.getElementById('grafica');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Violencia psicológica','Violencia física','Violencia sexual'],
+datasets: [{
+label: 'Tipos de violencia reportados',
+data: [49,34,41],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+y: {
+beginAtZero: true
+}
+}
+}
+});
+
+</script>
 
 <header>
 <h1>Estadísticas sobre violencia contra la mujer</h1>
@@ -24,7 +47,9 @@ La violencia puede ocurrir en el hogar, el trabajo, la escuela
 o incluso en espacios digitales.
 </p>
 
-</section>
+</section> <h2>Estadísticas sobre violencia contra la mujer</h2>
+
+<canvas id="grafica"></canvas>
 
 <footer>
 Datos informativos
