@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Estadísticas</title>
+<link rel="stylesheet" href="../estilos.css">
+</head>
+
+<body>
+
+<header>
+<h1>Estadísticas sobre violencia contra la mujer</h1>
+</header>
+
+<section>
+
+<p>
+Diversos estudios muestran que un gran porcentaje de mujeres han
+experimentado algún tipo de violencia a lo largo de su vida.
+</p>
+
+<p>
+La violencia puede ocurrir en el hogar, el trabajo, la escuela
+o incluso en espacios digitales.
+</p>
+
+</section>
+
+<footer>
+Datos informativos
+</footer>
+
+</body>
+</html>
