@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<title>Violencia Cero</title>
-<link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violencia Cero | Alto a la Violencia contra la Mujer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
 <body>
 
 <header>
-
-<h1>Violencia Cero</h1>
-
-<nav>
-<a href="index.html">Inicio</a>
-<a href="paginas/tipos.html">Tipos de violencia</a>
-<a href="paginas/estadisticas.html">Estadísticas</a>
-<a href="paginas/recursos.html">Recursos</a>
-<a href="paginas/ayuda.html">Ayuda</a>
-</nav>
-
+    <div class="nav-container">
+        <div class="logo">V<span>CERO</span></div>
+        <nav>
+            <a href="index.html" class="active">INICIO</a>
+            <a href="paginas/tipos.html">TIPOS</a>
+            <a href="paginas/estadisticas.html">DATOS</a>
+            <a href="paginas/recursos.html">RECURSOS</a>
+            <a href="paginas/ayuda.html" class="btn-ayuda-nav">AYUDA AHORA</a>
+        </nav>
+    </div>
 </header>
 
-
 <section class="hero">
-
-<h2>La violencia contra las mujeres es un problema global</h2>
-
-<p>
-Informarse y visibilizar esta problemática es un paso fundamental
-para prevenirla y apoyar a las víctimas.
-</p>
-
+    <div class="hero-content">
+        <h1>NO ES NORMAL.<br>NO ES TU CULPA.<br>ES VIOLENCIA.</h1>
+        <p>Visibilizar es el primer acto de resistencia. Infórmate, actúa, sobrevive.</p>
+        <div class="hero-btns">
+            <a href="#info" class="btn-main">CONOCER LA REALIDAD</a>
+            <a href="paginas/ayuda.html" class="btn-sec">NECESITO AYUDA</a>
+        </div>
+    </div>
 </section>
 
-
-<section>
-
-<h2>¿Qué es la violencia contra la mujer?</h2>
-
-<p>
-La violencia contra las mujeres se refiere a cualquier acto de violencia
-basado en el género que cause daño físico, psicológico, sexual o económico.
-</p>
-
-<p>
-Según el Instituto Nacional de Estadística y Geografía,
-más del 70% de las mujeres en México han experimentado
-algún tipo de violencia a lo largo de su vida.
-</p>
-
+<section class="datos-rapidos">
+    <div class="container">
+        <h2 class="impacto-title">LA REALIDAD EN CIFRAS</h2>
+        <div class="grid-datos">
+            <div class="dato-card">
+                <span class="numero" data-target="70.1">70.1%</span>
+                <p>de las mujeres en México han experimentado violencia a lo largo de su vida (ENDIREH, 2021).</p>
+            </div>
+            <div class="dato-card">
+                <span class="numero" data-target="1">1</span>
+                <p>cada 2 horas. Ese es el promedio de feminicidios cometidos en México (INEGI).</p>
+            </div>
+            <div class="dato-card">
+                <span class="numero" data-target="137">137</span>
+                <p>mujeres son asesinadas diariamente por miembros de su familia a nivel global (ONU Mujeres).</p>
+            </div>
+        </div>
+    </div>
 </section>
 
+<main id="info" class="container">
+    <section class="definicion">
+        <div class="grid-2">
+            <div class="text-block">
+                <h2>¿QUÉ ESTÁ PASANDO?</h2>
+                <p>La violencia contra las mujeres no es solo física. Es un sistema de opresión que se manifiesta psicológicamente, económicamente, sexualmente y digitalmente.</p>
+                <p class="cite-apa">“Cualquier acto de violencia basado en el género que tenga como resultado posible o real un daño físico, sexual o psicológico” (ONU Mujeres, 2022).</p>
+            </div>
+            <div class="img-block">
+                <img src="imagenes/violencia.jpg" alt="Marcha feminista">
+            </div>
+        </div>
+    </section>
 
-<section>
+    <section class="modulos">
+        <h2 class="section-title">HERRAMIENTAS DE INFORMACIÓN</h2>
+        <div class="tarjetas-brutales">
+            <a class="tarjeta-pro" href="paginas/tipos.html">
+                <div class="icon-box"><i class="fas fa-eye"></i></div>
+                <div class="text-box">
+                    <h3>Identificar</h3>
+                    <p>Reconoce el violentómetro y las señales de alerta.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="tarjeta-pro" href="paginas/estadisticas.html">
+                <div class="icon-box"><i class="fas fa-chart-bar"></i></div>
+                <div class="text-box">
+                    <h3>Visualizar</h3>
+                    <p>Mapas y datos duros sobre el feminicidio.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="tarjeta-pro" href="paginas/recursos.html">
+                <div class="icon-box"><i class="fas fa-life-ring"></i></div>
+                <div class="text-box">
+                    <h3>Actuar</h3>
+                    <p>Protocolos de seguridad y material de descarga.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+            <a class="tarjeta-pro" href="paginas/ayuda.html">
+                <div class="icon-box"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="text-box">
+                    <h3>Sobrevivir</h3>
+                    <p>Líneas de ayuda y directorios de refugios.</p>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
 
-<h2>Explora la información</h2>
+    <div class="panic-banner">
+        <h2>¿ESTÁS EN PELIGRO?</h2>
+        <a href="tel:911" class="btn-panic">LLAMA AL 911</a>
+    </div>
 
-<div class="tarjetas">
-
-<a class="tarjeta" href="paginas/tipos.html">
-<h3>Tipos de violencia</h3>
-<p>Conoce las diferentes formas de violencia.</p>
-</a>
-
-<a class="tarjeta" href="paginas/estadisticas.html">
-<h3>Estadísticas</h3>
-<p>Consulta datos reales sobre esta problemática.</p>
-</a>
-
-<a class="tarjeta" href="paginas/recursos.html">
-<h3>Recursos</h3>
-<p>Material educativo e informativo.</p>
-</a>
-
-<a class="tarjeta" href="paginas/ayuda.html">
-<h3>Ayuda</h3>
-<p>Información sobre dónde buscar apoyo.</p>
-</a>
-
-</div>
-
-</section>
-
-
-<section class="ayuda">
-
-<h2>¿Necesitas ayuda?</h2>
-
-<p>
-Si tú o alguien que conoces está en una situación de violencia,
-puedes comunicarte con los servicios de emergencia.
-</p>
-
-<h3>Emergencias: 911</h3>
-
-</section>
-
-
-<section>
-
-<h2>Referencias</h2>
-
-<p>
-Instituto Nacional de Estadística y Geografía. (2021).
-Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares.
-</p>
-
-<p>
-ONU Mujeres. (2022).
-Hechos y cifras sobre la violencia contra las mujeres.
-</p>
-
-</section>
-
+</main>
 
 <footer>
-
-<p>Proyecto informativo sobre la prevención de la violencia contra la mujer.</p>
-
+    <div class="footer-content container">
+        <p><strong>VIOLENCIA CERO</strong>. Información verídica basada en datos de INEGI, ENDIREH y ONU Mujeres. (APA 7). Hecho en Chiapas, México.</p>
+    </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
