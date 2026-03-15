@@ -2,78 +2,52 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>No Estás Sola</title>
-
-<style>
-
-body{
-font-family: Arial;
-margin:0;
-background:#f4f4f4;
-}
-
-header{
-background:#8e44ad;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-nav{
-background:#6c3483;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:30px;
-}
-
-footer{
-background:#333;
-color:white;
-text-align:center;
-padding:15px;
-}
-
-</style>
+<link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
 <header>
 <h1>No Estás Sola</h1>
-<p>Información y apoyo contra la violencia hacia la mujer</p>
+<p>Información, prevención y recursos de ayuda contra la violencia hacia la mujer</p>
 </header>
 
 <nav>
-<a href="#">Inicio</a>
-<a href="#">Tipos de violencia</a>
-<a href="#">Ayuda</a>
-<a href="#">Estadísticas</a>
+<a href="index.html">Inicio</a>
+<a href="paginas/tipos.html">Tipos de violencia</a>
+<a href="paginas/estadisticas.html">Estadísticas</a>
+<a href="paginas/recursos.html">Recursos</a>
+<a href="paginas/ayuda.html">Ayuda</a>
 </nav>
 
 <section>
 
-<h2>Bienvenida</h2>
+<h2>¿Qué es la violencia contra la mujer?</h2>
 
 <p>
-Esta página busca informar sobre la violencia contra la mujer y ofrecer
-recursos de ayuda disponibles en México.
+La violencia contra la mujer es cualquier acción que cause daño físico,
+psicológico, sexual o económico hacia una mujer por razones de género.
+Es un problema social que afecta a millones de mujeres en todo el mundo.
 </p>
+
+<h2>Objetivo de esta página</h2>
+
+<p>
+Este sitio busca informar, prevenir y ofrecer recursos de apoyo para
+mujeres que puedan estar viviendo situaciones de violencia.
+</p>
+
+<button class="boton-ayuda" onclick="ayuda()">🚨 Necesito ayuda</button>
 
 </section>
 
 <footer>
-Proyecto educativo 2026
+Proyecto informativo | 2026
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
