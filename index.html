@@ -4,98 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Violencia Cero | Inicio</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <div class="logo">Violencia<span>Cero</span></div>
-            <nav>
-                <a href="index.html" class="active">Inicio</a>
-                <a href="paginas/tipos.html">Conoce</a>
-                <a href="paginas/estadisticas.html">Datos</a>
-                <a href="paginas/recursos.html">Recursos</a>
-                <a href="paginas/ayuda.html" class="btn-ayuda-nav">Ayuda</a>
-            </nav>
-        </div>
-    </header>
+<header>
+    <div class="nav-container">
+        <div class="logo">Violencia<span>Cero</span></div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="paginas/tipos.html">Conoce</a>
+            <a href="paginas/estadisticas.html">Datos</a>
+            <a href="paginas/ayuda.html" class="btn-nav">Ayuda</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>No estás sola.<br>Informarse es el primer paso.</h1>
-            <p>Un espacio dedicado a la prevención, visibilización y apoyo ante la violencia contra las mujeres.</p>
-            <div class="hero-btns">
-                <a href="#que-es" class="btn-main">¿Qué es la violencia?</a>
-                <a href="paginas/ayuda.html" class="btn-sec">Necesito apoyo</a>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-content">
+        <h1>No estás sola.</h1>
+        <p>Un espacio seguro para informarte sobre la violencia contra las mujeres.</p>
+        <a href="#info" class="btn-principal">Saber más</a>
+    </div>
+</section>
 
-    <section id="que-es" class="container text-center">
-        <div class="seccion-intro">
-            <span class="badge">Concepto</span>
-            <h2>¿Qué es la violencia contra la mujer?</h2>
-            <p class="texto-largo">
-                Es cualquier acción u omisión, basada en su género, que cause daño o sufrimiento psicológico, físico, patrimonial, económico, sexual o la muerte. Ocurre tanto en el ámbito privado como en el público y es una violación a los derechos humanos.
-            </p>
-            <div class="cita-apa">
-                <p>"Más del 70% de las mujeres en México han experimentado algún tipo de violencia a lo largo de su vida."</p>
-                <span>— INEGI (ENDIREH, 2021)</span>
-            </div>
-        </div>
-    </section>
+<main id="info" class="contenedor-centrado">
+    <div class="texto-bloque">
+        <h2>¿Qué es la violencia?</h2>
+        <p>Es cualquier acto basado en el género que cause daño físico, psicológico o sexual. En México, 7 de cada 10 mujeres han vivido alguna situación de violencia (INEGI, 2021).</p>
+    </div>
 
-    <section class="container">
-        <h2 class="text-center">Explora nuestro sitio</h2>
-        <div class="tarjetas-grid">
-            
-            <a href="paginas/tipos.html" class="tarjeta">
-                <div class="tarjeta-icon"><i class="fas fa-hand-dots"></i></div>
-                <h3>Tipos de Violencia</h3>
-                <p>Aprende a identificar las señales de abuso físico, emocional y digital.</p>
-            </a>
+    <div class="cuadrícula-opciones">
+        <a href="paginas/tipos.html" class="caja">
+            <i class="fas fa-hand-paper"></i>
+            <h3>Tipos</h3>
+            <p>Identifica las señales.</p>
+        </a>
+        <a href="paginas/estadisticas.html" class="caja">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Datos</h3>
+            <p>Estadísticas reales.</p>
+        </a>
+        <a href="paginas/recursos.html" class="caja">
+            <i class="fas fa-book"></i>
+            <h3>Recursos</h3>
+            <p>Guías de apoyo.</p>
+        </a>
+        <a href="paginas/ayuda.html" class="caja">
+            <i class="fas fa-phone"></i>
+            <h3>Ayuda</h3>
+            <p>Contactos directos.</p>
+        </a>
+    </div>
+</main>
 
-            <a href="paginas/estadisticas.html" class="tarjeta">
-                <div class="tarjeta-icon"><i class="fas fa-chart-pie"></i></div>
-                <h3>Estadísticas Reales</h3>
-                <p>Datos actualizados sobre la situación actual en Chiapas y México.</p>
-            </a>
+<section class="emergencia">
+    <div class="contenedor-centrado">
+        <h2>¿Necesitas ayuda inmediata?</h2>
+        <p>La atención es gratuita y confidencial las 24 horas.</p>
+        <a href="tel:911" class="boton-emergencia">911</a>
+    </div>
+</section>
 
-            <a href="paginas/recursos.html" class="tarjeta">
-                <div class="tarjeta-icon"><i class="fas fa-book-open"></i></div>
-                <h3>Recursos Gratuitos</h3>
-                <p>Material informativo y guías de actuación inmediata.</p>
-            </a>
-
-            <a href="paginas/ayuda.html" class="tarjeta">
-                <div class="tarjeta-icon"><i class="fas fa-phone-holding"></i></div>
-                <h3>Canales de Ayuda</h3>
-                <p>Contactos directos de instituciones y refugios seguros.</p>
-            </a>
-
-        </div>
-    </section>
-
-    <section class="emergencia-banner">
-        <div class="container text-center">
-            <i class="fas fa-shield-heart"></i>
-            <h2>Tu seguridad es lo más importante</h2>
-            <p>Si te encuentras en una situación de riesgo inminente, no dudes en llamar.</p>
-            <a href="tel:911" class="btn-911">LLAMA AL 911</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container text-center">
-            <p><strong>Violencia Cero</strong> - Proyecto Informativo</p>
-            <p>Tuxtla Gutiérrez, Chiapas | 2026</p>
-        </div>
-    </footer>
+<footer>
+    <p>Violencia Cero | Chiapas, México 2026</p>
+</footer>
 
 </body>
 </html>
