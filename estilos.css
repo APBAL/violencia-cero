@@ -1,116 +1,111 @@
-/* RESET BASICO */
+/* --- RESET Y CONFIGURACIÓN --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Lora', serif;
-    color: #333;
+    background-color: #0d0d0d; /* Fondo casi negro, muy pro */
+    color: #fff;
     line-height: 1.6;
-    background-color: #fff;
 }
 
-h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+h1, h2, h3, .logo { font-family: 'Poppins', sans-serif; font-weight: 700; }
 
-/* NAVEGACION (No fija para que no tape nada) */
+.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+.text-center { text-align: center; }
+
+/* --- NAVEGACIÓN (Restaurada y Centrada) --- */
 header {
-    background: #fff;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
+    background: #000;
+    padding: 15px 0;
+    border-bottom: 2px solid #e91e63; /* Línea rosa brillante */
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantiene Logo izq y Ayuda der */
     align-items: center;
 }
 
-.logo { font-size: 1.5rem; font-weight: 700; color: #6c5ce7; }
-.logo span { color: #e91e63; }
+.logo { font-size: 1.6rem; color: #fff; text-decoration: none; }
+.logo span { color: #e91e63; } /* Rosa vibrante */
+
+/* ESTO ES LO QUE CENTRA EL MENÚ */
+nav {
+    display: flex;
+    gap: 25px;
+    justify-content: center; /* Centra los enlaces dentro del nav */
+}
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin-left: 15px;
+    color: #fff;
     font-weight: 600;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn-nav {
-    color: #e91e63;
+nav a:hover { color: #e91e63; }
+
+.btn-ayuda-nav {
     border: 2px solid #e91e63;
-    padding: 5px 15px;
-    border-radius: 20px;
+    color: #e91e63 !important;
+    padding: 6px 20px;
+    border-radius: 5px;
 }
 
-/* HERO (El bloque de arriba) */
+/* --- HERO SECTION (Recuperada con degradado) --- */
 .hero {
-    background: #6c5ce7;
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
+    height: 80vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, #311352); /* Degradado oscuro a morado */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
 
-.hero h1 { font-size: 3rem; margin-bottom: 10px; }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.hero-content { max-width: 700px; }
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
+.hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 40px; }
 
-.btn-principal {
-    background: #e91e63;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 700;
-}
+.hero-btns { display: flex; gap: 15px; }
 
-/* CONTENEDOR PRINCIPAL */
-.contenedor-centrado {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 60px 20px;
-    text-align: center;
-}
+.btn-main { background: #e91e63; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; }
+.btn-sec { background: white; color: black; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; }
 
-.texto-bloque { margin-bottom: 50px; }
-.texto-bloque h2 { color: #6c5ce7; font-size: 2.5rem; margin-bottom: 15px; }
+/* --- SECCIONES DE CONTENIDO --- */
+#que-es h2 { color: #e91e63; font-size: 2.5rem; margin-bottom: 20px; }
+.texto-largo { max-width: 700px; margin: 0 auto; color: #ccc; }
 
-/* LA CUADRICULA (Opciones) */
-.cuadrícula-opciones {
+.tarjetas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
 }
 
-.caja {
-    background: #f9f9f9;
-    padding: 30px;
+.tarjeta {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
     text-decoration: none;
-    color: #333;
-    border-radius: 15px;
+    color: white;
+    text-align: center;
+    border: 1px solid #333;
     transition: 0.3s;
 }
 
-.caja:hover { background: #6c5ce7; color: white; transform: translateY(-5px); }
-.caja i { font-size: 2rem; color: #e91e63; margin-bottom: 15px; }
-.caja:hover i { color: white; }
+.tarjeta:hover { transform: translateY(-5px); border-color: #e91e63; }
+.tarjeta i { font-size: 2.5rem; color: #e91e63; margin-bottom: 20px; }
 
-/* SECCION EMERGENCIA */
-.emergencia {
-    background: #fff0f3;
-    padding: 80px 20px;
-    text-align: center;
-    border-top: 1px solid #ffe3e8;
-}
+/* --- EMERGENCIA --- */
+.emergencia-banner { background: #000; padding: 80px 20px; border-top: 1px solid #e91e63; }
+.btn-911 { display: inline-block; background: #e91e63; color: white; font-size: 3rem; font-weight: 800; padding: 15px 60px; border-radius: 50px; text-decoration: none; margin-top: 20px; }
 
-.boton-emergencia {
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 2.5rem;
-    color: white;
-    background: #e91e63;
-    padding: 15px 50px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 800;
-}
-
-footer { padding: 40px; text-align: center; background: #333; color: white; font-size: 0.9rem; }
+footer { padding: 40px; text-align: center; background: #000; color: #555; border-top: 1px solid #1a1a1a; font-size: 0.8rem; }
