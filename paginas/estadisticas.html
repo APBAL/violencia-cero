@@ -46,43 +46,72 @@ Datos informativos
 
 document.addEventListener("DOMContentLoaded", function(){
 
-// Primera gráfica
+// --------------------
+// Gráfica 1
+// Tipos de violencia
+// --------------------
+
 const ctx = document.getElementById('grafica').getContext('2d');
 
 new Chart(ctx, {
 type: 'bar',
 data: {
-labels: ['Psicológica','Física','Sexual'],
+labels: [
+'Psicológica',
+'Sexual',
+'Física',
+'Económica'
+],
 datasets: [{
 label: 'Tipos de violencia reportados (%)',
-data: [49,34,41],
+data: [51.6,49.7,34.7,27.4],
 backgroundColor:[
 '#8e44ad',
 '#e74c3c',
-'#3498db'
+'#3498db',
+'#f1c40f'
 ],
 borderWidth:1
 }]
 },
 options:{
 responsive:true,
+plugins:{
+legend:{
+display:true
+}
+},
 scales:{
 y:{
-beginAtZero:true
+beginAtZero:true,
+title:{
+display:true,
+text:'Porcentaje de mujeres'
+}
 }
 }
 }
 });
 
-// Segunda gráfica
+
+// --------------------
+// Gráfica 2
+// Lugares donde ocurre
+// --------------------
+
 const ctx2 = document.getElementById('grafica2').getContext('2d');
 
 new Chart(ctx2, {
 type: 'pie',
 data: {
-labels: ['Hogar','Espacio público','Trabajo','Escuela'],
+labels: [
+'Espacios públicos',
+'Escuela',
+'Trabajo',
+'Ámbito familiar'
+],
 datasets: [{
-data: [43,26,16,15],
+data: [38.7,25.3,16.6,10.3],
 backgroundColor:[
 '#8e44ad',
 '#e74c3c',
@@ -90,12 +119,87 @@ backgroundColor:[
 '#f1c40f'
 ]
 }]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+position:'bottom'
+}
+}
+}
+});
+
+
+// --------------------
+// Gráfica 3
+// Mujeres que han sufrido violencia
+// --------------------
+
+const ctx3 = document.getElementById('grafica3').getContext('2d');
+
+new Chart(ctx3, {
+type: 'doughnut',
+data: {
+labels: [
+'Ha sufrido violencia',
+'No ha sufrido violencia'
+],
+datasets: [{
+data: [70.1,29.9],
+backgroundColor:[
+'#e74c3c',
+'#2ecc71'
+]
+}]
+},
+options:{
+responsive:true,
+plugins:{
+legend:{
+position:'bottom'
+}
+}
 }
 });
 
 });
 
 </script>
+</body> <h2>Mujeres que han sufrido violencia en México</h2>
 
-</body>
+<canvas id="grafica3"></canvas>
+
+<h2>Datos en México</h2>
+
+<p>
+De acuerdo con la Encuesta Nacional sobre la Dinámica de las Relaciones
+en los Hogares realizada por el Instituto Nacional de Estadística y
+Geografía, aproximadamente el 70.1% de las mujeres mexicanas de
+15 años o más han experimentado algún tipo de violencia a lo largo
+de su vida.
+</p>
+
+<p>
+La violencia psicológica y la violencia sexual son las más frecuentes,
+seguidas de la violencia física y económica.
+</p>
+
+<p>
+La violencia contra las mujeres puede presentarse en distintos
+espacios de la vida cotidiana, como el hogar, el trabajo,
+la escuela y los espacios públicos.
+</p>
+
+<h2>Referencias</h2>
+
+<p>
+Instituto Nacional de Estadística y Geografía. (2021).
+Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares (ENDIREH).
+</p>
+
+<p>
+ONU Mujeres. (2022).
+Hechos y cifras: Poner fin a la violencia contra las mujeres.
+</p>
 </html>
