@@ -32,6 +32,9 @@ o incluso en espacios digitales.
 
 <canvas id="grafica" width="400" height="200"></canvas>
 
+<h2>Lugares donde ocurre la violencia</h2>
+
+<canvas id="grafica2"></canvas>
 </section>
 
 <footer>
@@ -69,6 +72,24 @@ beginAtZero:true
 }
 });
 
+});
+
+const ctx2 = document.getElementById('grafica2').getContext('2d');
+
+new Chart(ctx2, {
+type: 'pie',
+data: {
+labels: ['Hogar','Espacio público','Trabajo','Escuela'],
+datasets: [{
+data: [43,26,16,15],
+backgroundColor:[
+'#8e44ad',
+'#e74c3c',
+'#3498db',
+'#f1c40f'
+]
+}]
+}
 });
 
 </script>
