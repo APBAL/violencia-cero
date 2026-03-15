@@ -1,53 +1,31 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>No Estás Sola</title>
-<link rel="stylesheet" href="estilos.css">
-</head>
+.tarjetas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
 
-<body>
+.tarjeta{
+background:white;
+padding:20px;
+border-radius:8px;
+text-decoration:none;
+color:#333;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+transition:transform 0.2s;
+}
 
-<header>
-<h1>No Estás Sola</h1>
-<p>Información, prevención y recursos de ayuda contra la violencia hacia la mujer</p>
-</header>
+.tarjeta:hover{
+transform:scale(1.05);
+}
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="paginas/tipos.html">Tipos de violencia</a>
-<a href="paginas/estadisticas.html">Estadísticas</a>
-<a href="paginas/recursos.html">Recursos</a>
-<a href="paginas/ayuda.html">Ayuda</a>
-</nav>
+.tarjeta h3{
+color:#8e44ad;
+}
 
-<section>
-
-<h2>¿Qué es la violencia contra la mujer?</h2>
-
-<p>
-La violencia contra la mujer es cualquier acción que cause daño físico,
-psicológico, sexual o económico hacia una mujer por razones de género.
-Es un problema social que afecta a millones de mujeres en todo el mundo.
-</p>
-
-<h2>Objetivo de esta página</h2>
-
-<p>
-Este sitio busca informar, prevenir y ofrecer recursos de apoyo para
-mujeres que puedan estar viviendo situaciones de violencia.
-</p>
-
-<button class="boton-ayuda" onclick="ayuda()">🚨 Necesito ayuda</button>
-
-</section>
-
-<footer>
-Proyecto informativo | 2026
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+.ayuda{
+background:#fdecea;
+text-align:center;
+padding:40px;
+border-radius:10px;
+}
