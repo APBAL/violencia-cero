@@ -1,137 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<title>Estadísticas</title>
-<link rel="stylesheet" href="../estilos.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violencia Cero | Estadísticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
 
 <header>
-<h1>Estadísticas sobre violencia contra la mujer</h1>
+    <div class="nav-container">
+        <a href="../index.html" class="logo">Violencia<span>Cero</span></a>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="tipos.html">Estadísticas</a>
+            <a href="estadisticas.html" class="active">Datos</a>
+            <a href="recursos.html">Recursos</a>
+            <a href="ayuda.html" class="btn-ayuda">Ayuda</a>
+        </nav>
+    </div>
 </header>
 
-<section>
-
-<p>
-Diversos estudios muestran que un gran porcentaje de mujeres han
-experimentado algún tipo de violencia a lo largo de su vida.
-</p>
-
-<p>
-La violencia puede ocurrir en el hogar, el trabajo, la escuela
-o incluso en espacios digitales.
-</p>
-
-<h2>Tipos de violencia reportados</h2>
-<canvas id="grafica" width="400" height="200"></canvas>
-
-<h2>Lugares donde ocurre la violencia</h2>
-<canvas id="grafica2"></canvas>
-
-<h2>Mujeres que han sufrido violencia en México</h2>
-<canvas id="grafica3"></canvas>
-
-<h2>Datos en México</h2>
-
-<p>
-De acuerdo con la Encuesta Nacional sobre la Dinámica de las Relaciones
-en los Hogares realizada por el 
-:contentReference[oaicite:0]{index=0},
-aproximadamente el 70.1% de las mujeres mexicanas de
-15 años o más han experimentado algún tipo de violencia a lo largo
-de su vida.
-</p>
-
-<p>
-La violencia psicológica y la violencia sexual son las más frecuentes,
-seguidas de la violencia física y económica.
-</p>
-
-<p>
-La violencia contra las mujeres puede presentarse en distintos
-espacios de la vida cotidiana, como el hogar, el trabajo,
-la escuela y los espacios públicos.
-</p>
-
-<h2>Referencias</h2>
-
-<p>
-Instituto Nacional de Estadística y Geografía. (2021).
-Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares (ENDIREH).
-</p>
-
-<p>
-:contentReference[oaicite:1]{index=1}. (2022).
-Hechos y cifras: Poner fin a la violencia contra las mujeres.
-</p>
-
+<section class="hero-sub">
+    <div class="hero-content">
+        <h1>Datos que Impactan</h1>
+        <p>Las estadísticas nos permiten visibilizar la magnitud del problema y fundamentar la urgencia de actuar.</p>
+    </div>
 </section>
 
+<main class="container">
+    
+    <section class="seccion-texto">
+        <h2>Panorama en México</h2>
+        <p>De acuerdo con la ENDIREH (2021), la violencia contra las mujeres es un problema estructural que afecta a la mayoría de la población femenina en el país.</p>
+    </section>
+
+    <div class="grid-graficas">
+        
+        <div class="tarjeta-grafica">
+            <h3>Tipos de Violencia Reportados</h3>
+            <p>Porcentaje de mujeres que han vivido este tipo de violencia.</p>
+            <canvas id="grafica1"></canvas>
+        </div>
+
+        <div class="tarjeta-grafica">
+            <h3>Ámbitos de Ocurrencia</h3>
+            <p>Lugares donde se reporta mayor incidencia.</p>
+            <canvas id="grafica2"></canvas>
+        </div>
+
+        <div class="tarjeta-grafica">
+            <h3>Situación Nacional</h3>
+            <p>Mujeres de 15 años o más que han sufrido violencia.</p>
+            <div class="canvas-pie">
+                <canvas id="grafica3"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="referencias-apa">
+        <p><strong>Referencias (APA 7):</strong></p>
+        <ul>
+            <li>Instituto Nacional de Estadística y Geografía. (2022). <em>Encuesta Nacional sobre la Dinámica de las Relaciones en los Hogares (ENDIREH) 2021</em>.</li>
+            <li>ONU Mujeres. (2022). <em>Hechos y cifras: Poner fin a la violencia contra las mujeres</em>.</li>
+        </ul>
+    </section>
+</main>
+
 <footer>
-Datos informativos
+    <p>Violencia Cero © 2026 | Chiapas, México</p>
 </footer>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function(){
+    // Configuración global para que las letras de las gráficas sean blancas
+    Chart.defaults.color = '#ccc';
+    Chart.defaults.font.family = 'Inter';
 
-// Gráfica 1
-const ctx = document.getElementById('grafica').getContext('2d');
+    // Gráfica 1: Barras
+    new Chart(document.getElementById('grafica1'), {
+        type: 'bar',
+        data: {
+            labels:['Psicológica','Sexual','Física','Económica'],
+            datasets:[{
+                label: '% de incidencia',
+                data:[51.6, 49.7, 34.7, 27.4],
+                backgroundColor:['#e91e63', '#6c5ce7', '#ff85a1', '#a29bfe']
+            }]
+        },
+        options: { responsive: true }
+    });
 
-new Chart(ctx, {
-type: 'bar',
-data: {
-labels:['Psicológica','Sexual','Física','Económica'],
-datasets:[{
-label:'Tipos de violencia reportados (%)',
-data:[51.6,49.7,34.7,27.4],
-backgroundColor:['#8e44ad','#e74c3c','#3498db','#f1c40f']
-}]
-},
-options:{
-responsive:true,
-scales:{y:{beginAtZero:true}}
-}
+    // Gráfica 2: Pie (Círculo)
+    new Chart(document.getElementById('grafica2'), {
+        type: 'pie',
+        data: {
+            labels:['Comunitario','Escolar','Laboral','Familiar'],
+            datasets:[{
+                data:[45.6, 32.3, 27.9, 11.4],
+                backgroundColor:['#e91e63', '#6c5ce7', '#ffffff', '#351451'],
+                borderWidth: 0
+            }]
+        }
+    });
+
+    // Gráfica 3: Dona
+    new Chart(document.getElementById('grafica3'), {
+        type: 'doughnut',
+        data: {
+            labels:['Han sufrido violencia','No han sufrido'],
+            datasets:[{
+                data:[70.1, 29.9],
+                backgroundColor:['#e91e63', '#222'],
+                borderWidth: 0
+            }]
+        }
+    });
 });
-
-
-// Gráfica 2
-const ctx2 = document.getElementById('grafica2').getContext('2d');
-
-new Chart(ctx2,{
-type:'pie',
-data:{
-labels:['Espacios públicos','Escuela','Trabajo','Ámbito familiar'],
-datasets:[{
-data:[38.7,25.3,16.6,10.3],
-backgroundColor:['#8e44ad','#e74c3c','#3498db','#f1c40f']
-}]
-}
-});
-
-
-// Gráfica 3
-const ctx3 = document.getElementById('grafica3').getContext('2d');
-
-new Chart(ctx3,{
-type:'doughnut',
-data:{
-labels:['Ha sufrido violencia','No ha sufrido violencia'],
-datasets:[{
-data:[70.1,29.9],
-backgroundColor:['#e74c3c','#2ecc71']
-}]
-}
-});
-
-});
-
 </script>
 
 </body>
