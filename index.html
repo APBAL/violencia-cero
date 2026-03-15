@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Violencia Cero | Inicio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -14,57 +14,60 @@
     <div class="nav-container">
         <div class="logo">Violencia<span>Cero</span></div>
         <nav>
-            <a href="index.html">Inicio</a>
+            <a href="index.html" class="active">Inicio</a>
             <a href="paginas/tipos.html">Conoce</a>
             <a href="paginas/estadisticas.html">Datos</a>
-            <a href="paginas/ayuda.html" class="btn-nav">Ayuda</a>
+            <a href="paginas/recursos.html">Recursos</a>
+            <a href="paginas/ayuda.html" class="btn-ayuda-nav">Ayuda</a>
         </nav>
     </div>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h1>No estás sola.</h1>
-        <p>Un espacio seguro para informarte sobre la violencia contra las mujeres.</p>
-        <a href="#info" class="btn-principal">Saber más</a>
+        <h1>No estás sola.<br>Informarse es el primer paso.</h1>
+        <p>Un espacio dedicado a la prevención, visibilización y apoyo ante la violencia contra las mujeres.</p>
+        <div class="hero-btns">
+            <a href="#que-es" class="btn-main">¿Qué es la violencia?</a>
+            <a href="paginas/ayuda.html" class="btn-sec">Necesito apoyo</a>
+        </div>
     </div>
 </section>
 
-<main id="info" class="contenedor-centrado">
-    <div class="texto-bloque">
-        <h2>¿Qué es la violencia?</h2>
-        <p>Es cualquier acto basado en el género que cause daño físico, psicológico o sexual. En México, 7 de cada 10 mujeres han vivido alguna situación de violencia (INEGI, 2021).</p>
-    </div>
+<section id="que-es" class="container text-center">
+    <h2>¿Qué es la violencia contra la mujer?</h2>
+    <p class="texto-largo">Es cualquier acción u omisión, basada en su género, que cause daño o sufrimiento psicológico, físico, patrimonial, económico, sexual o la muerte. INEGI (ENDIREH, 2021).</p>
+</section>
 
-    <div class="cuadrícula-opciones">
-        <a href="paginas/tipos.html" class="caja">
+<section class="container">
+    <div class="tarjetas-grid">
+        <a href="paginas/tipos.html" class="tarjeta">
             <i class="fas fa-hand-paper"></i>
             <h3>Tipos</h3>
             <p>Identifica las señales.</p>
         </a>
-        <a href="paginas/estadisticas.html" class="caja">
+        <a href="paginas/estadisticas.html" class="tarjeta">
             <i class="fas fa-chart-bar"></i>
             <h3>Datos</h3>
             <p>Estadísticas reales.</p>
         </a>
-        <a href="paginas/recursos.html" class="caja">
+        <a href="paginas/recursos.html" class="tarjeta">
             <i class="fas fa-book"></i>
             <h3>Recursos</h3>
             <p>Guías de apoyo.</p>
         </a>
-        <a href="paginas/ayuda.html" class="caja">
+        <a href="paginas/ayuda.html" class="tarjeta">
             <i class="fas fa-phone"></i>
             <h3>Ayuda</h3>
             <p>Contactos directos.</p>
         </a>
     </div>
-</main>
+</section>
 
-<section class="emergencia">
-    <div class="contenedor-centrado">
-        <h2>¿Necesitas ayuda inmediata?</h2>
-        <p>La atención es gratuita y confidencial las 24 horas.</p>
-        <a href="tel:911" class="boton-emergencia">911</a>
+<section class="emergencia-banner">
+    <div class="container text-center">
+        <h2>Atención inmediata</h2>
+        <a href="tel:911" class="btn-911">911</a>
     </div>
 </section>
 
