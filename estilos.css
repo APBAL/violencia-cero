@@ -1,111 +1,131 @@
-/* --- RESET Y CONFIGURACIÓN --- */
+/* RESET GENERAL */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Lora', serif;
-    background-color: #0d0d0d; /* Fondo casi negro, muy pro */
+    font-family: 'Inter', sans-serif;
+    background-color: #000; /* Fondo negro como tu imagen */
     color: #fff;
     line-height: 1.6;
 }
 
-h1, h2, h3, .logo { font-family: 'Poppins', sans-serif; font-weight: 700; }
+h1, h2, h3 { font-family: 'Poppins', sans-serif; }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-.text-center { text-align: center; }
-
-/* --- NAVEGACIÓN (Restaurada y Centrada) --- */
+/* NAVEGACIÓN (IDÉNTICA A TU IMAGEN) */
 header {
     background: #000;
-    padding: 15px 0;
-    border-bottom: 2px solid #e91e63; /* Línea rosa brillante */
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 20px 0;
+    border-bottom: 2px solid #e91e63;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
     display: flex;
-    justify-content: space-between; /* Mantiene Logo izq y Ayuda der */
+    justify-content: space-between;
     align-items: center;
+    padding: 0 40px;
 }
 
-.logo { font-size: 1.6rem; color: #fff; text-decoration: none; }
-.logo span { color: #e91e63; } /* Rosa vibrante */
+.logo { font-size: 1.8rem; font-weight: 700; color: #fff; }
+.logo span { color: #e91e63; }
 
-/* ESTO ES LO QUE CENTRA EL MENÚ */
-nav {
-    display: flex;
-    gap: 25px;
-    justify-content: center; /* Centra los enlaces dentro del nav */
-}
+nav { display: flex; align-items: center; gap: 20px; }
 
 nav a {
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
     font-size: 0.9rem;
-    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
-nav a:hover { color: #e91e63; }
+nav a.active { color: #e91e63; }
 
-.btn-ayuda-nav {
-    border: 2px solid #e91e63;
-    color: #e91e63 !important;
-    padding: 6px 20px;
-    border-radius: 5px;
+.btn-ayuda {
+    border: 1px solid #e91e63;
+    color: #e91e63;
+    padding: 8px 25px;
+    text-decoration: none;
 }
 
-/* --- HERO SECTION (Recuperada con degradado) --- */
+/* HERO SECTION (EL DEGRADADO DE TU IMAGEN) */
 .hero {
-    height: 80vh;
-    background: linear-gradient(to right, rgba(0,0,0,0.9) 30%, #311352); /* Degradado oscuro a morado */
-    background-size: cover;
-    background-position: center;
+    height: 85vh;
+    background: linear-gradient(to right, #000 40%, #351451 100%);
     display: flex;
     align-items: center;
     padding: 0 10%;
 }
 
-.hero-content { max-width: 700px; }
-.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #fff; }
-.hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 40px; }
+.hero-content { max-width: 800px; }
 
-.hero-btns { display: flex; gap: 15px; }
-
-.btn-main { background: #e91e63; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; }
-.btn-sec { background: white; color: black; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; }
-
-/* --- SECCIONES DE CONTENIDO --- */
-#que-es h2 { color: #e91e63; font-size: 2.5rem; margin-bottom: 20px; }
-.texto-largo { max-width: 700px; margin: 0 auto; color: #ccc; }
-
-.tarjetas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
+.hero h1 {
+    font-size: 5rem; /* Tamaño grande e impactante */
+    line-height: 1;
+    margin-bottom: 25px;
 }
 
-.tarjeta {
-    background: #1a1a1a;
-    padding: 40px;
-    border-radius: 10px;
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+/* BOTONES RECTANGULARES */
+.hero-btns { display: flex; gap: 20px; }
+
+.btn-rosa {
+    background: #e91e63;
+    color: #fff;
+    padding: 15px 35px;
     text-decoration: none;
-    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.btn-blanco {
+    background: #fff;
+    color: #000;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* SECCIÓN INFERIOR */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.seccion-texto { text-align: center; margin-bottom: 60px; }
+.seccion-texto h2 { font-size: 2.5rem; color: #e91e63; margin-bottom: 20px; }
+.fuente-apa { font-size: 0.8rem; color: #666; margin-top: 20px; }
+
+.grid-opciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-opcion {
+    background: #111;
+    padding: 40px;
     text-align: center;
-    border: 1px solid #333;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #222;
     transition: 0.3s;
 }
 
-.tarjeta:hover { transform: translateY(-5px); border-color: #e91e63; }
-.tarjeta i { font-size: 2.5rem; color: #e91e63; margin-bottom: 20px; }
+.tarjeta-opcion:hover { border-color: #e91e63; transform: translateY(-5px); }
+.tarjeta-opcion i { font-size: 2rem; color: #e91e63; margin-bottom: 15px; }
 
-/* --- EMERGENCIA --- */
-.emergencia-banner { background: #000; padding: 80px 20px; border-top: 1px solid #e91e63; }
-.btn-911 { display: inline-block; background: #e91e63; color: white; font-size: 3rem; font-weight: 800; padding: 15px 60px; border-radius: 50px; text-decoration: none; margin-top: 20px; }
-
-footer { padding: 40px; text-align: center; background: #000; color: #555; border-top: 1px solid #1a1a1a; font-size: 0.8rem; }
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #111;
+    color: #444;
+    font-size: 0.8rem;
+}
