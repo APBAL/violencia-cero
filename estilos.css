@@ -1,54 +1,53 @@
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f5f5f5;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>No Estás Sola</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
 
-header{
-background:#6c3483;
-color:white;
-padding:20px;
-text-align:center;
-}
+<body>
 
-nav a{
-color:white;
-margin:10px;
-text-decoration:none;
-font-weight:bold;
-}
+<header>
+<h1>No Estás Sola</h1>
+<p>Información, prevención y recursos de ayuda contra la violencia hacia la mujer</p>
+</header>
 
-.hero{
-background:#af7ac5;
-color:white;
-padding:60px;
-text-align:center;
-}
+<nav>
+<a href="index.html">Inicio</a>
+<a href="paginas/tipos.html">Tipos de violencia</a>
+<a href="paginas/estadisticas.html">Estadísticas</a>
+<a href="paginas/recursos.html">Recursos</a>
+<a href="paginas/ayuda.html">Ayuda</a>
+</nav>
 
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
-}
+<section>
 
-.boton{
-display:inline-block;
-background:#8e44ad;
-color:white;
-padding:10px 20px;
-margin:10px;
-text-decoration:none;
-border-radius:5px;
-}
+<h2>¿Qué es la violencia contra la mujer?</h2>
 
-.ayuda{
-background:#fdecea;
-text-align:center;
-}
+<p>
+La violencia contra la mujer es cualquier acción que cause daño físico,
+psicológico, sexual o económico hacia una mujer por razones de género.
+Es un problema social que afecta a millones de mujeres en todo el mundo.
+</p>
 
-footer{
-background:#333;
-color:white;
-text-align:center;
-padding:20px;
-}
+<h2>Objetivo de esta página</h2>
+
+<p>
+Este sitio busca informar, prevenir y ofrecer recursos de apoyo para
+mujeres que puedan estar viviendo situaciones de violencia.
+</p>
+
+<button class="boton-ayuda" onclick="ayuda()">🚨 Necesito ayuda</button>
+
+</section>
+
+<footer>
+Proyecto informativo | 2026
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
