@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<head>
 <meta charset="UTF-8">
 <title>Estadísticas</title>
 <link rel="stylesheet" href="../estilos.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body><script>
+<body>
+
+<header>
+<h1>Estadísticas sobre violencia contra la mujer</h1>
+</header>
+
+<section>
+
+<p>
+Diversos estudios muestran que un gran porcentaje de mujeres han
+experimentado algún tipo de violencia a lo largo de su vida.
+</p>
+
+<p>
+La violencia puede ocurrir en el hogar, el trabajo, la escuela
+o incluso en espacios digitales.
+</p>
+
+<h2>Tipos de violencia reportados</h2>
+
+<canvas id="grafica"></canvas>
+
+</section>
+
+<footer>
+Datos informativos
+</footer>
+
+<script>
 
 const ctx = document.getElementById('grafica');
 
@@ -30,30 +61,6 @@ beginAtZero: true
 });
 
 </script>
-
-<header>
-<h1>Estadísticas sobre violencia contra la mujer</h1>
-</header>
-
-<section>
-
-<p>
-Diversos estudios muestran que un gran porcentaje de mujeres han
-experimentado algún tipo de violencia a lo largo de su vida.
-</p>
-
-<p>
-La violencia puede ocurrir en el hogar, el trabajo, la escuela
-o incluso en espacios digitales.
-</p>
-
-</section> <h2>Estadísticas sobre violencia contra la mujer</h2>
-
-<canvas id="grafica"></canvas>
-
-<footer>
-Datos informativos
-</footer>
 
 </body>
 </html>
